@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<instant-run
+    abi="arm64-v8a,armeabi-v7a,armeabi"
+    api-level="23"
+    density="560dpi"
+    format="7"
+    timestamp="604222244387671"
+    token="3474505334214547789" >
+
+    <task
+        name="javac"
+        duration="244" />
+    <task
+        name="instant-run-dex"
+        duration="0" />
+    <task
+        name="instant-run-transform"
+        duration="73" />
+    <task
+        name="verifier"
+        duration="12" />
+
+    <artifact
+        location="C:\Users\qnp684\AndroidStudioProjects\GeoQuiz\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_3\classes.dex"
+        type="DEX" />
+
+    <build timestamp="597431786393798" >
+        <artifact
+            location="C:\Users\qnp684\AndroidStudioProjects\GeoQuiz\app\build\outputs\apk\app-debug.apk"
+            type="MAIN" />
+    </build>
+    <build timestamp="604222244387671" >
+        <artifact
+            location="C:\Users\qnp684\AndroidStudioProjects\GeoQuiz\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_3\classes.dex"
+            type="DEX" />
+    </build>
+
+</instant-run>
