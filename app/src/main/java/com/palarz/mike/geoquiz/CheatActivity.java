@@ -35,6 +35,7 @@ public class CheatActivity extends AppCompatActivity {
     //All references to the views within the layout
     private TextView mAnswerTextView;
     private Button mShowAnswer;
+    private TextView mAPILevel;
 
     //Tag used for debugging
     private static final String TAG = "CheatActivity";
@@ -77,6 +78,7 @@ public class CheatActivity extends AppCompatActivity {
                     mAnswerTextView.setText(R.string.false_button);
                 mIsAnswerShown = true;
                 setAnswerShownResult();
+
                 //New code from API level 21
                 if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
                     int cx = mShowAnswer.getWidth() / 2;
@@ -95,12 +97,16 @@ public class CheatActivity extends AppCompatActivity {
                     anim.start();
                 }
 
+                //Handling devices that have APIs lower than 21
                 else{
                     mAnswerTextView.setVisibility(View.VISIBLE);
                     mShowAnswer.setVisibility(View.INVISIBLE);
                 }
             }
         });
+
+        mAPILevel = (TextView) findViewById(R.id.api_level);
+        mAPILevel.setText("API Level " + Build.VERSION.SDK_INT);
 
         if(savedInstanceState != null) {
             mIsAnswerShown = savedInstanceState.getBoolean(KEY_IS_ANSWER_SHOWN, false);
